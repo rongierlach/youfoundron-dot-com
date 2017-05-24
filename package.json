@@ -4,5 +4,10 @@
   "description": "My personal website.",
   "main": "app.js",
   "repository": "https://github.com/rongierlach/youfoundron-dot-com",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2"
+  }
 }
