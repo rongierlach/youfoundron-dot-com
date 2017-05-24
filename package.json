@@ -14,7 +14,7 @@
     "snazzy": "^7.0.0",
     "standard": "^10.0.2"
   },
-  "pre-commit": []
+  "pre-commit": [
     "lint"
   ],
   "standard": {
