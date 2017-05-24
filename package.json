@@ -5,11 +5,18 @@
   "main": "app.js",
   "repository": "https://github.com/rongierlach/youfoundron-dot-com",
   "license": "GPL-3.0",
+  "scripts": {
+    "lint": "standard | snazzy"
+  },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "pre-commit": "^1.2.2",
     "snazzy": "^7.0.0",
     "standard": "^10.0.2"
   },
+  "pre-commit": []
+    "lint"
+  ],
   "standard": {
     "parser": "babel-eslint",
     "globals": [
