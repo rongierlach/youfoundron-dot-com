@@ -2,13 +2,13 @@
   "name": "youfoundron-dot-com",
   "version": "1.0.0",
   "description": "My personal website.",
-  "main": "app.js",
+  "main": "server/index.js",
   "repository": "https://github.com/rongierlach/youfoundron-dot-com",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "next",
+    "dev": "node server",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server",
     "lint": "standard | snazzy"
   },
   "devDependencies": {
@@ -29,7 +29,9 @@
     ]
   },
   "dependencies": {
+    "express": "^4.15.3",
     "next": "beta",
+    "next-routes": "^1.0.25",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
