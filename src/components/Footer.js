@@ -34,7 +34,7 @@ const Footer = () => (
       &nbsp;built with&nbsp;
       <a className='link white-80 dim' href='http://github.com/zeit/next.js/' target='_blank'>Next.js</a>
       ,&nbsp;
-      <a className='link white-80 dim' href='http://tachyons.io/' target='_blank'>Tachyons.css</a>
+      <a className='link white-80 dim' href='http://tachyons.io/' target='_blank'>Tachyons</a>
       &nbsp;and&nbsp;
       <a className='link white-80 dim' href='http://buttercms.com/' target='_blank'>ButterCMS</a>
     </p>
