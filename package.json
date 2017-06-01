@@ -43,6 +43,7 @@
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",
     "redux": "^3.6.0",
-    "redux-collect": "^1.1.0"
+    "redux-collect": "^1.1.0",
+    "scope-types": "^1.1.2"
   }
 }
