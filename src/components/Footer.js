@@ -8,7 +8,7 @@ const Spacer = () => (
 )
 
 const Footer = () => (
-  <footer className='bg-near-black white-60 pv4 pv5-m pv6-l ph4'>
+  <footer className='bg-near-black white-60 pv4 pv5-ns ph4'>
     <p className='db dib-ns mr4 mr5-ns f7'>
       © {m().year()} Ron Gierlach
     </p>
