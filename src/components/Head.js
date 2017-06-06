@@ -10,12 +10,12 @@ const Head = ({children}) => (
     <link rel='stylesheet' type='text/css' href='/static/tachyons.min.css' />
     <link rel='icon' type='image/x-icon' href='/static/favicon.ico' />
 
+    {/* Put children first to establish tag precedence */}
+    {children}
+
     {/* fallback to title and description from locals */}
     <title>{locals.title}</title>
     <meta name='description' content={locals.description} />
-
-    {/* Put children first to establish tag precedence */}
-    {children}
 
     <meta property='og:type' content='website' />
     <meta property='og:locale' content='en_US' />
