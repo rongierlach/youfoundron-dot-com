@@ -1,8 +1,8 @@
-import NextDocument, { Main, NextScript } from 'next/document'
+import Document, { Main, NextScript } from 'next/document'
 import flush from 'styled-jsx/server'
 import Head from '../src/components/Head'
 
-class Document extends NextDocument {
+export default class extends Document {
   static getInitialProps ({renderPage}) {
     const {html, head, errorHtml, chunks} = renderPage()
     const styles = flush()
@@ -13,7 +13,7 @@ class Document extends NextDocument {
     return (
       <html>
         <Head />
-        <body className='w-100 sans-serif bg-white'>
+        <body className='w-100 sans-serif near-black bg-near-white'>
           <Main />
           <NextScript />
         </body>
@@ -21,5 +21,3 @@ class Document extends NextDocument {
     )
   }
 }
-
-export default Document
