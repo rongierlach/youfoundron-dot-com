@@ -3,6 +3,7 @@ import {toWords} from 'number-to-words'
 import Head from 'next/head'
 import Link from 'next/link'
 
+import withRedux from '../src/util/withRedux'
 import Layout from '../src/components/Layout'
 import Socials from '../src/components/Socials'
 
@@ -20,6 +21,9 @@ const Home = () => (
       <hr />
       <p className='lh-copy'>
         I'm a software developer, residing in Chicago, with over {yearsExperience()} years of industry experience.
+      </p>
+      <p className='lh-copy'>
+        I recently left my job to focus on learning Ðapp development on Ethereum.
       </p>
       <p className='lh-copy'>
         I've done varied&nbsp;
@@ -42,15 +46,9 @@ const Home = () => (
         </Link>
         .
       </p>
-
-      {/* <p className='measure lh-copy'>
-      I touch the entire stack and have used a smörgåsbord of tools, languages, and frameworks.
-      <br /><br />
-      Currently I'm learning OCaml, studying for an AWS certification, and figuring out how to write Ðapps on Ethereum.
-      </p> */}
     </article>
     <Socials />
   </Layout>
 )
 
-export default Home
+export default withRedux(Home)
