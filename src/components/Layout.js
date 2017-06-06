@@ -1,12 +1,12 @@
 import Header from './Header'
 import Footer from './Footer'
 
-const Layout = ({children, ...props}) => (
-  <div {...props}>
+const Layout = ({children}) => (
+  <div className='flex flex-column min-vh-100' >
     <Header />
-    <div className='ph3 ph5-ns pv5'>
+    <main className='ph3 ph5-ns pv5 flex-auto'>
       {children}
-    </div>
+    </main>
     <Footer />
   </div>
 )
