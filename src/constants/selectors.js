@@ -9,6 +9,10 @@ export const selectNavExpanded = createSelector(
   nav => nav.get('expanded')
 )
 
+export const selectBlogStatus = state => (
+  state.get('blog')
+)
+
 export const selectContactFormStatus = state => (
   state.get('contactForm')
 )
