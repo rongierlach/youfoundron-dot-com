@@ -4,11 +4,13 @@ export default fromJS({
   nav: {
     expanded: false
   },
-  contact: {
-    form: {
-      name: undefined,
-      email: undefined,
-      message: undefined
-    }
+  blog: {
+    posts: [],
+    search: undefined
+  },
+  contactForm: {
+    name: undefined,
+    email: undefined,
+    message: undefined
   }
 })
