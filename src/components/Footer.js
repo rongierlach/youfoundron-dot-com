@@ -1,5 +1,5 @@
 import m from 'moment'
-import Link from 'next/link'
+import { Link } from '../routes'
 
 const Spacer = () => (
   <span>
@@ -13,19 +13,19 @@ const Footer = () => (
       © {m().year()} Ron Gierlach
     </p>
     <p className='db dib-ns tr-ns f7 fr-ns'>
-      <Link href='/home'>
+      <Link route='home'>
         <a className='link white-60 dim'> Home </a>
       </Link>
       <Spacer />
-      <Link href='/work'>
+      <Link route='work'>
         <a className='link white-60 dim'> Work </a>
       </Link>
       <Spacer />
-      <Link href='/blog'>
+      <Link route='blog'>
         <a className='link white-60 dim'> Blog </a>
       </Link>
       <Spacer />
-      <Link href='/contact'>
+      <Link route='contact'>
         <a className='link white-60 dim'> Contact </a>
       </Link>
     </p>

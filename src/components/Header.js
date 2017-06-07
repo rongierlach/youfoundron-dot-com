@@ -1,11 +1,11 @@
-import Router from 'next/router'
+import { Router } from '../routes'
 
 import collect from '../util/collect'
 import { selectNavExpanded } from '../constants/selectors'
 
-const pushTo = (route, cb) => e => {
+const pushRoute = (routeName, cb) => e => {
   e.preventDefault()
-  Router.push(route)
+  Router.pushRoute(routeName)
   cb()
 }
 
@@ -16,7 +16,7 @@ const Header = ({expanded, closeNav, toggleNav}) => (
       <div className='dtc v-mid mid-gray w-third w-25-ns tc tl-ns mb2 mb0-ns'>
         <a
           title='Home'
-          onClick={pushTo('/', closeNav)}
+          onClick={pushRoute('home', closeNav)}
           className='pointer'
         >
           <img className='grow-large dib w2 h2 br-100 pa1' alt='Home' src='/static/zap.png' />
@@ -38,17 +38,17 @@ const Header = ({expanded, closeNav, toggleNav}) => (
       >
         <a
           title='Work'
-          onClick={pushTo('/work', closeNav)}
+          onClick={pushRoute('work', closeNav)}
           className='pointer link near-white hover-gold tc tr-ns tl-ns f3 f5-ns db dib-ns pv3 pv1-ns mr0 mr4-ns ttu tracked fw6'
         >Work</a>
         <a
           title='Blog'
-          onClick={pushTo('/blog', closeNav)}
+          onClick={pushRoute('blog', closeNav)}
           className='pointer link near-white hover-gold tc tl-ns f3 f5-ns db dib-ns pv3 pv1-ns mr0 mr4-ns ttu tracked fw6 bt b--dark-gray b--none-ns'
         >Blog</a>
         <a
           title='Contact'
-          onClick={pushTo('/contact', closeNav)}
+          onClick={pushRoute('contact', closeNav)}
           className='pointer link near-white hover-gold tc tl-ns f3 f5-ns db dib-ns pv3 pv1-ns mr0 ttu tracked fw6 bt b--dark-gray b--none-ns'
         >Contact</a>
       </div>
