@@ -1,4 +1,3 @@
-// import { Component as BaseComponent } from 'react'
 import Router from 'next/router'
 
 import collect from '../util/collect'
@@ -9,29 +8,6 @@ const pushTo = (route, cb) => e => {
   Router.push(route)
   cb()
 }
-
-// const withPrefetching = (Component, routes = []) => (
-//   class extends BaseComponent {
-//     componentWillMount () {
-//       routes.forEach(route => {
-//
-//         if (typeof window === 'undefined') return
-//         console.log('prefetchin ', route)
-//         Router.prefetch(route)
-//       })
-//     }
-//     render () {
-//       return <Component {...this.props} />
-//     }
-//   }
-// )
-//
-// const routesToPrefetch = [
-//   '/',
-//   '/work',
-//   '/blog',
-//   '/contact'
-// ]
 
 const Header = ({expanded, closeNav, toggleNav}) => (
   <header className='bg-near-black'>
@@ -82,12 +58,12 @@ const Header = ({expanded, closeNav, toggleNav}) => (
         className='pointer h2 dtc fr tr v-mid dn-ns w-third p0-ns white'
       >
         <span style={{transition: '0.2s'}} className={expanded
-          ? 'db w-close h-close bg-white absolute rotate-45 mr2 mt-close'
-          : 'db w2 mt2 mb2 bw2 pb2 bt bb b--white'
+          ? 'db w-close h-close bg-near-white absolute rotate-45 mr2 mt-close'
+          : 'db w2 mt2 mb2 bw2 pb2 bt bb b--near-white'
         } />
         <span style={{transition: '0.2s'}} className={expanded
-          ? 'db w-close h-close bg-white absolute rotate--45 mr2 mt-close'
-          : 'db w2 mt1 bw2 pb0 bt b--white'
+          ? 'db w-close h-close bg-near-white absolute rotate--45 mr2 mt-close'
+          : 'db w2 mt1 bw2 pb0 bt b--near-white'
         } />
       </a>
     </nav>
@@ -99,8 +75,6 @@ const Header = ({expanded, closeNav, toggleNav}) => (
     `}</style>
   </header>
 )
-
-// const HeaderPrefetched = withPrefetching(Header, routesToPrefetch)
 
 export default collect(
   [['actions', 'closeNav']],

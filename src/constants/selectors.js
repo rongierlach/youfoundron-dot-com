@@ -9,26 +9,21 @@ export const selectNavExpanded = createSelector(
   nav => nav.get('expanded')
 )
 
-export const selectContactStatus = state => (
-  state.get('contact')
-)
-
-export const selectContactForm = createSelector(
-  selectContactStatus,
-  contact => contact.get('form')
+export const selectContactFormStatus = state => (
+  state.get('contactForm')
 )
 
 export const selectContactName = createSelector(
-  selectContactForm,
-  form => form.get('name')
+  selectContactFormStatus,
+  contactForm => contactForm.get('name')
 )
 
 export const selectContactEmail = createSelector(
-  selectContactForm,
-  form => form.get('email')
+  selectContactFormStatus,
+  contactForm => contactForm.get('email')
 )
 
 export const selectContactMessage = createSelector(
-  selectContactForm,
-  form => form.get('message')
+  selectContactFormStatus,
+  contactForm => contactForm.get('message')
 )

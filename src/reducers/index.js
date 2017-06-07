@@ -2,10 +2,10 @@ import { combineReducers } from 'redux-immutable'
 
 import nav from './nav'
 // import blog from './blog'
-import contact from './contact'
+import contactForm from './contactForm'
 
 export default combineReducers({
   nav,
   // blog,
-  contact
+  contactForm
 })
