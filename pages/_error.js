@@ -17,7 +17,7 @@ class Error extends Component {
         <Head>
           <title>Error</title>
         </Head>
-        <FadeIn>
+        <FadeIn id='error'>
           <section className='measure center'>
             <h1 className='tc tracked-tight f-headline lh-solid mb0'>{this.props.statusCode}</h1>
             <p className='tc georgia i f5 f4-ns lh-copy'>Nothing to see here!</p>
