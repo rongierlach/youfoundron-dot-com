@@ -1,7 +1,9 @@
 import scopeTypes from 'scope-types'
 
 const appTypes = [
+  'SET_SMALL',
   'CLOSE_NAV',
+  'RESET_NAV',
   'TOGGLE_NAV'
 ]
 
