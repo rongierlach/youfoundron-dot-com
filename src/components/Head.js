@@ -4,8 +4,8 @@ import locals from '../locals'
 // https://github.com/joshbuchea/HEAD#meta
 const Head = ({children}) => (
   <NextHead>
-    <meta charset='utf-8' />
-    <meta http-equiv='x-ua-compatible' content='ie=edge' />
+    <meta charSet='utf-8' />
+    <meta httpEquiv='x-ua-compatible' content='ie=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no' />
     <link rel='stylesheet' type='text/css' href='/static/tachyons.min.css' />
     <link rel='icon' type='image/x-icon' href='/static/favicon.ico' />
