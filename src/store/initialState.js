@@ -2,7 +2,8 @@ import {fromJS} from 'immutable'
 
 export default fromJS({
   nav: {
-    expanded: false
+    isSmall: undefined,
+    expanded: undefined
   },
   blog: {
     posts: [],
