@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export default class FadeIn extends Component {
   state = { activated: false }
-  delayTimeout = undefined
+  delayTimer = undefined
 
   static propTypes = {
     id: PropTypes.string.isRequired
@@ -16,13 +16,13 @@ export default class FadeIn extends Component {
   }
 
   componentDidMount () {
-    this.delayTimeout = setTimeout(() => {
+    this.delayTimer = setTimeout(() => {
       this.setState(state => ({activated: true}))
     }, Number(this.props.delay))
   }
 
   componentWillUnount () {
-    window.clearTimeout(this.delayTimeout)
+    clearTimeout(this.delayTimer)
   }
 
   render () {
