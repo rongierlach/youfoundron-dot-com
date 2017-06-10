@@ -10,7 +10,8 @@ const appTypes = [
 const contactFormTypes = [
   'CHANGE_NAME',
   'CHANGE_EMAIL',
-  'CHANGE_MESSAGE'
+  'CHANGE_MESSAGE',
+  'SUBMIT_FORM'
 ]
 
 export default {

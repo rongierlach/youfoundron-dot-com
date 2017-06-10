@@ -31,3 +31,7 @@ export const changeMessage = e => ({
   type: types.CHANGE_MESSAGE,
   payload: e.target.value
 })
+
+export const submitForm = e => ({
+  type: types.SUBMIT_FORM
+})

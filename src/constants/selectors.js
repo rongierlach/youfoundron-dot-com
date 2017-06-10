@@ -36,3 +36,8 @@ export const selectContactMessage = createSelector(
   selectContactFormStatus,
   contactForm => contactForm.get('message')
 )
+
+export const selectSubmittedStatus = createSelector(
+  selectContactFormStatus,
+  contactForm => contactForm.get('submitted')
+)
