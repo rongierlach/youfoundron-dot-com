@@ -12,6 +12,8 @@ export default (state = defaultState, action) => {
       return state.set('email', action.payload)
     case types.CHANGE_MESSAGE:
       return state.set('message', action.payload)
+    case types.SUBMIT_FORM:
+      return state.set('submitted', true)
     default:
       return state
   }
