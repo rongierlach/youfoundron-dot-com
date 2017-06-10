@@ -2,18 +2,32 @@ import collect from '../util/collect'
 import {
   selectContactName,
   selectContactEmail,
-  selectContactMessage
+  selectContactMessage,
+  selectSubmittedStatus
 } from '../constants/selectors'
+
+import FadeIn from './FadeIn'
 
 const ContactForm = ({
   name,
   email,
   message,
+  submitted,
   changeName,
   changeEmail,
-  changeMessage
+  changeMessage,
+  submitForm
 }) => (
-  <form>
+  submitted
+  ? <FadeIn id='thankyou'>
+    <div className='tc'>
+      <h1 className='tracked-tight f-headline lh-solid mb0'>Whoops!</h1>
+      <p className='georgia i f4-ns lh-copy'>
+        Still working on the mail server but I appreciate you wanting to reach out. You can email me directly at <a href='mailto:ron@youfoundron.com?Subject=Contact%20Form' target='_top'>ron@youfoundron.com</a>
+      </p>
+    </div>
+  </FadeIn>
+  : <form action='/contact' method='post' onSubmit={submitForm}>
     <label className='f6 b db mb2'>
       Name <span className='normal black-60'>(optional)</span>
     </label>
@@ -23,6 +37,7 @@ const ContactForm = ({
       value={name}
       onChange={changeName}
       className='outline-0 input-reset ba b--black-20 pa2 mb2 db w-100 br0 georgia'
+      autoFocus
     />
     <label className='f6 b db mb2'>Email</label>
     <input
@@ -52,7 +67,9 @@ export default collect(
   [['actions', 'changeName']],
   [['actions', 'changeEmail']],
   [['actions', 'changeMessage']],
+  [['actions', 'submitForm']],
   [selectContactName, 'name'],
   [selectContactEmail, 'email'],
-  [selectContactMessage, 'message']
+  [selectContactMessage, 'message'],
+  [selectSubmittedStatus, 'submitted']
 )(ContactForm)
