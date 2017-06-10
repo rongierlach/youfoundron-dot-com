@@ -17,7 +17,7 @@ const Blog = ({ data }) => (
         <hr />
         <PostList posts={data} />
       </section>
-    </ FadeIn>
+    </FadeIn>
   </Layout>
 )
 
