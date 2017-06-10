@@ -31,7 +31,7 @@ const Home = () => (
         </FadeIn>
         <FadeIn id='p2' direction='left' delay={baseDelay + 2 * steppedDelay}>
           <p className='f5 f4-ns lh-copy'>
-            I'm currently spending my time learning Ðapp development in Ethereum.
+            I'm currently spending my time learning ÐApp development in Ethereum.
           </p>
         </FadeIn>
         <FadeIn id='p3' direction='left' delay={baseDelay + 3 * steppedDelay}>
