@@ -10,8 +10,9 @@ export default fromJS({
     search: undefined
   },
   contactForm: {
-    name: undefined,
-    email: undefined,
-    message: undefined
+    name: '',
+    email: '',
+    message: '',
+    submitted: false
   }
 })
