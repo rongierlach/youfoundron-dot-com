@@ -1,5 +1,5 @@
-const DotEnv = require('dotenv-webpack')
-const { EnvironmentPlugin } = require('webpack')
+// const DotEnv = require('dotenv-webpack')
+// const { EnvironmentPlugin } = require('webpack')
 
 module.exports = {
   webpack: (config, {dev}) => {
