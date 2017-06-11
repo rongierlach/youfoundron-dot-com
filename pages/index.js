@@ -43,7 +43,7 @@ const Home = () => (
         </FadeIn>
         <FadeIn id='p5' direction='left' delay={baseDelay + 4 * steppedDelay}>
           <p className='f5 f4-ns lh-copy'>
-            If you're interested in working together, or just feel like talking shop, let's&nbsp;
+            If you're interested in working together, or just feel like connecting, let's&nbsp;
             <Link href='/contact'>
               <a className='sans-serif link fw9 black hover-gold'>get in touch</a>
             </Link>
