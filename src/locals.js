@@ -3,7 +3,8 @@ export default {
   description: 'The personal website of software developer Ron Gierlach.',
 
   /* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
-  gaTrackingId: process.env.GA_TRACKING_ID,
+  gaTrackingId: 'UA-52765720-1',
+  butterApiToken: 'fac8fdb770c99d13328431879db922ea3efc57db',
 
   facebook: {
     url: 'http://youfoundron.com',

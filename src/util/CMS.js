@@ -1,3 +1,4 @@
 import Butter from 'buttercms'
+import locals from '../locals'
 
-export default Butter(process.env.BUTTER_API_TOKEN)
+export default Butter(locals.butterApiToken)

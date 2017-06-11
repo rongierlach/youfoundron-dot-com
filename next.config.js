@@ -4,7 +4,7 @@ const { EnvironmentPlugin } = require('webpack')
 module.exports = {
   webpack: (config, {dev}) => {
     // plugins
-    const plugins = []
+    // const plugins = []
     // const env = dev
     //   ? new DotEnv({safe: true})
     //   : new EnvironmentPlugin({
@@ -13,9 +13,9 @@ module.exports = {
     //   })
     //
     // plugins.push(env)
-
-    config.plugins = config.plugins || []
-    config.plugins.push(...plugins)
+    //
+    // config.plugins = config.plugins || []
+    // config.plugins.push(...plugins)
 
     return config
   }
