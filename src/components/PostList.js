@@ -9,7 +9,7 @@ const PostList = ({posts, activated}) => (
   <ol className='list pl0'>
     {posts.map(({slug, title, summary, published}, i) => (
       <li key={i}>
-        <FadeIn id={`post-${i}`} direction='left' delay={baseDelay + i * steppedDelay} activated>
+        <FadeIn id={`post-${i}`} direction='left' delay={baseDelay + i * steppedDelay}>
           <Link route='post' params={{slug}}>
             <a className='link near-white hover-gold w-100 dt'>
               <div className='pa2 pl0 dtc v-mid mw-60'>
