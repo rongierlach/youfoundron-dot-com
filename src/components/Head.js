@@ -7,7 +7,7 @@ const Head = ({children}) => (
     <meta charSet='utf-8' />
     <meta httpEquiv='x-ua-compatible' content='ie=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no' />
-    <link rel='stylesheet' type='text/css' href='/static/tachyons.min.css' />
+    <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.7.4/tachyons.min.css' />
     <link rel='icon' type='image/x-icon' href='/static/favicon.ico' />
 
     {/* Put children first to establish tag precedence */}

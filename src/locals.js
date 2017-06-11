@@ -7,6 +7,10 @@ export default {
     image: 'https://d2wzhk7xhrnk1x.cloudfront.net/uuBFmwE4TBq6FGDrZEah_zap.png'
   },
 
+  images: {
+    zap: 'https://d2wzhk7xhrnk1x.cloudfront.net/uuBFmwE4TBq6FGDrZEah_zap.png'
+  },
+
   /* https://dev.twitter.com/cards/markup */
   twitter: {
     card: 'summary',

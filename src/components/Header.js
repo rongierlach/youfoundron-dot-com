@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import { Router } from '../routes'
+import locals from '../locals'
 
 import collect from '../util/collect'
 import { selectNavIsSmall, selectNavExpanded } from '../constants/selectors'
@@ -57,7 +58,7 @@ class Header extends Component {
               onClick={pushRoute('home', pushRouteCb)}
               className='pointer'
             >
-              <img className='grow-large dib w2 h2 br-100 pa1' alt='Home' src='/static/zap.png' />
+              <img className='grow-large dib w2 h2 br-100 pa1' alt='Home' src={locals.images.zap} />
             </a>
           </div>
           <div
