@@ -1,4 +1,11 @@
-import scopeTypes from 'scope-types'
+const scopeTypes = (types = [], scope = 'App') => (
+  types.reduce(
+    (scopedTypes, type) => {
+      scopedTypes[type] = Symbol(`${scope}/${type}`)
+      return scopedTypes
+    }, {}
+  )
+)
 
 const appTypes = [
   'SET_SMALL',

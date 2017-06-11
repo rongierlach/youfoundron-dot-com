@@ -1,28 +1,20 @@
-// const UglifyEsPlugin = require('uglify-es')
-// const DotEnv = require('dotenv-webpack')
-// const { EnvironmentPlugin } = require('webpack')
+// const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   webpack: (config, {dev}) => {
-    // plugins
-    // const plugins = []
-    // const env = dev
-    //   ? new DotEnv({safe: true})
-    //   : new EnvironmentPlugin({
-    //     'process.env.GA_TRACKING_ID': JSON.stringify(process.env.GA_TRACKING_ID),
-    //     'process.env.BUTTER_API_TOKEN': JSON.stringify(process.env.BUTTER_API_TOKEN)
+    // remove UglifyJsPlugin because breaking on ES6 code
+    // const plugins = config.plugins.filter(plugin => (
+    //   plugin.constructor.name !== 'UglifyJsPlugin'
+    // ))
+    //
+    // // add UglifyES Plugin
+    // plugins.push(
+    //   new UglifyJSPlugin({
+    //     sourceMap: dev
     //   })
+    // )
     //
-    // plugins.push(env)
-    //
-    // config.plugins = config.plugins || []
-    // config.plugins.push(...plugins)
-
-    // remove uglify
-    const plugins = config.plugins.filter(plugin => (
-      plugin.constructor.name !== 'UglifyJsPlugin'
-    ))
-    config.plugins = plugins
+    // config.plugins = plugins
 
     return config
   }
