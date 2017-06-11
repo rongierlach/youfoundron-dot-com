@@ -25,14 +25,3 @@ export default {
   ...scopeTypes(appTypes),
   ...scopeTypes(contactFormTypes, 'ContactForm')
 }
-
-// export default {
-//   SET_SMALL: 'SET_SMALL',
-//   CLOSE_NAV: 'CLOSE_NAV',
-//   RESET_NAV: 'RESET_NAV',
-//   TOGGLE_NAV: 'TOGGLE_NAV',
-//   CHANGE_NAME: 'CHANGE_NAME',
-//   CHANGE_EMAIL: 'CHANGE_EMAIL',
-//   CHANGE_MESSAGE: 'CHANGE_MESSAGE',
-//   SUBMIT_FORM: 'SUBMIT_FORM'
-// }
