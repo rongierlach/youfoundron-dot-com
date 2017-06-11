@@ -30,6 +30,7 @@
     ]
   },
   "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "buttercms": "^1.0.15",
     "cheerio": "^1.0.0-rc.1",
     "dotenv-safe": "^4.0.4",
