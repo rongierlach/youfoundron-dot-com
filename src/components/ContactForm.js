@@ -20,12 +20,11 @@ const ContactForm = ({
 }) => (
   submitted
   ? <FadeIn id='thankyou'>
-    <div className='tc'>
-      <h1 className='tracked-tight f-headline lh-solid mb0'>Whoops!</h1>
-      <p className='georgia i f4-ns lh-copy'>
-        Still working on the mail server but I appreciate you wanting to reach out. You can email me directly at <a href='mailto:ron@youfoundron.com?Subject=Contact%20Form' target='_top'>ron@youfoundron.com</a>
-      </p>
-    </div>
+    <h1 className='tracked-tight f-headline lh-solid mb0 tc'>Whoops!</h1>
+    <p className='georgia i f4-ns lh-copy'>
+      Still working on the mail server but I appreciate you wanting to reach out. You can email me directly at <a href='mailto:ron@youfoundron.com?Subject=Contact%20Form' target='_top' className='sans-serif link fw9 black hover-gold'>ron@youfoundron.com</a>
+    </p>
+    <p className='georgia i f4-ns lh-copy'>If my resume is what you're looking for, click <a href='https://d2wzhk7xhrnk1x.cloudfront.net/2qbkT7ctRP2pffqktFM8_resume.pdf' target='_blank' className='sans-serif link fw9 black hover-gold'>here</a>.</p>
   </FadeIn>
   : <form action='/contact' method='post' onSubmit={submitForm}>
     <label className='f6 b db mb2'>
