@@ -4,7 +4,12 @@ import { connect, Provider } from 'react-redux'
 import createStore from '../store'
 import _initialState from '../store/initialState'
 
-const skipMerge = ['initialState', 'initialProps', 'isServer', 'store']
+const skipMerge = {
+  initialState: true,
+  initialProps: true,
+  isServer: true,
+  store: true
+}
 const storeKey = '__NEXT_REDUX_STORE__'
 
 const initStore = (makeStore, req, initialState) => {
@@ -50,7 +55,7 @@ export default (Cmp, ...connectArgs) => {
     // Fix for _document
     const mergedProps = Object.keys(props)
       .reduce((mergedObj, key) => {
-        if (!skipMerge.includes(key)) {
+        if (!skipMerge[key]) {
           mergedObj[key] = props[key]
         }
         return mergedObj
