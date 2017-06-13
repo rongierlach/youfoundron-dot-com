@@ -35,7 +35,7 @@ const Post = ({ error, post = {} }) => (
     <Head>
       <title>{post.seo_title}</title>
       <meta name='description' content={post.meta_description} />
-      <link rel='stylesheet' type='text/css' href='http://d2z2rr99bkshyr.cloudfront.net/buttercms-post-defaults.css' />
+      <link rel='stylesheet' type='text/css' href='https://d2z2rr99bkshyr.cloudfront.net/buttercms-post-defaults.css' />
       <style>{`
         .align-center {
           text-align: center;

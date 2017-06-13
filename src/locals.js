@@ -3,7 +3,7 @@ export default {
   description: 'The personal website of software developer Ron Gierlach.',
 
   facebook: {
-    url: 'http://youfoundron.com',
+    url: 'https://youfoundron.com',
     image: 'https://d2wzhk7xhrnk1x.cloudfront.net/uuBFmwE4TBq6FGDrZEah_zap.png'
   },
 
