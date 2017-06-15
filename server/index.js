@@ -8,12 +8,12 @@ const routes = require('../src/routes')
 // const mailRouter = require('./mailRouter')
 
 const app = next({dev: process.env.NODE_ENV !== 'production'})
-// const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 const handler = routes.getRequestHandler(app)
 
 app.prepare().then(() => {
   express()
     .use(handler)
     // .use('/contact', mailRouter)
-    .listen(process.env.PORT || 3000)
+    .listen(port)
 })

@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "NODE_ENV=production node server",
     "lint": "standard | snazzy",
-    "deploy": "git push heroku master"
+    "deploy": "git push heroku master",
+    "heroku-postbuild": "next build"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
