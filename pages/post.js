@@ -12,7 +12,7 @@ import withRedux from '../src/util/withRedux'
 
 const parentNameClassNamePairs = [
   ['p', 'f5 f4-ns lh-copy georgia'],
-  ['a', 'ml0 link black hover-gold sans-serif'],
+  ['a', 'ml0 fw9 link black hover-gold sans-serif'],
   ['blockquote', 'ml0 f6 f5-ns lh-copy i pl4 bl bw1 b--gold mb4']
 ]
 
