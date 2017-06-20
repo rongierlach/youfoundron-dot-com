@@ -30,16 +30,20 @@ const processingInstructions = [
   // inject classNames for relevant elements
   ...parentNameClassNamePairs.map(([parentName, className]) => ({
     shouldProcessNode: node => node && node.name === parentName,
-    processNode: (node, children) => React.createElement(node.name, {className}, children)
+    processNode: (node, children, i) => React.createElement(
+      node.name,
+      {...node.attribs, className, key: i},
+      children
+    )
   })),
   // apply syntax highlighting to code blocks
   {
     shouldProcessNode: isCodeBlock,
-    processNode: (node, children, index) => {
+    processNode: (node, children, i) => {
       const [ code ] = children
       const language = getLanguageFromNode(node)
       const highlightedHTML = Prism.highlight(code, Prism.languages[language])
-      const props = {dangerouslySetInnerHTML: {__html: highlightedHTML}, key: index}
+      const props = {dangerouslySetInnerHTML: {__html: highlightedHTML}, key: i}
       return React.createElement('code', props)
     }
   },
