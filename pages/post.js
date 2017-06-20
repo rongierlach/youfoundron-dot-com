@@ -32,7 +32,7 @@ const processingInstructions = [
     shouldProcessNode: node => node && node.name === parentName,
     processNode: (node, children, i) => React.createElement(
       node.name,
-      {...node.attribs, className, key: i},
+      {...node.attribs, style: {}, className, key: i},
       children
     )
   })),
