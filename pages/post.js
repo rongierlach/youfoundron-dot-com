@@ -1,7 +1,6 @@
 import React from 'react'
 import m from 'moment'
 import Head from 'next/head'
-// import cheerio from 'cheerio'
 import Prism from 'prismjs'
 import { Parser, ProcessNodeDefinitions } from 'html-to-react'
 
@@ -72,6 +71,14 @@ const Post = ({ error, post = {} }) => (
       <style>{`
         .align-center {
           text-align: center;
+        }
+        p code {
+          padding: 2px 4px;
+          font-size: 90%;
+          color: #c7254e;
+          background-color: #f9f2f4;
+          border-radius: 4px;
+          font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
         }
       `}</style>
     </Head>
