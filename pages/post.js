@@ -1,6 +1,9 @@
+import React from 'react'
 import m from 'moment'
 import Head from 'next/head'
-import cheerio from 'cheerio'
+// import cheerio from 'cheerio'
+import Prism from 'prismjs'
+import { Parser, ProcessNodeDefinitions } from 'html-to-react'
 
 import Error from './_error'
 import Layout from '../src/components/Layout.js'
@@ -8,25 +11,54 @@ import FadeIn from '../src/components/FadeIn.js'
 import CMS from '../src/util/CMS'
 import withRedux from '../src/util/withRedux'
 
-const elementClassNames = {
-  'p': 'f5 f4-ns lh-copy georgia',
-  'a': 'ml0 link near-black hover-gold',
-  'blockquote': 'ml0 f6 f5-ns lh-copy i pl4 bl bw1 b--gold mb4'
-}
+const parentNameClassNamePairs = [
+  ['p', 'f5 f4-ns lh-copy georgia'],
+  ['a', 'ml0 link black hover-gold sans-serif'],
+  ['blockquote', 'ml0 f6 f5-ns lh-copy i pl4 bl bw1 b--gold mb4']
+]
 
-const normalizeElement = (i, elm) => {
-  const classNames = elementClassNames[elm.name]
-  if (classNames) {
-    const elmClass = elm.attribs.class || ''
-    elm.attribs.class = elmClass + ' ' + classNames
+const getLanguageFromNode = node => (
+  node.parent.attribs.class.match(/language-(.*)/)[1]
+)
+const isValidNode = () => true
+const isCodeBlock = node => (
+  node.name === 'code' &&
+  node.parent && node.parent.name === 'pre' &&
+  getLanguageFromNode(node)
+)
+const processNodeDefinitions = new ProcessNodeDefinitions(React)
+const processingInstructions = [
+  // inject classNames for relevant elements
+  ...parentNameClassNamePairs.map(([parentName, className]) => ({
+    shouldProcessNode: node => node && node.name === parentName,
+    processNode: (node, children) => React.createElement(node.name, {className}, children)
+  })),
+  // apply syntax highlighting to code blocks
+  {
+    shouldProcessNode: isCodeBlock,
+    processNode: (node, children, index) => {
+      const [ code ] = children
+      const language = getLanguageFromNode(node)
+      const highlightedHTML = Prism.highlight(code, Prism.languages[language])
+      const props = {dangerouslySetInnerHTML: {__html: highlightedHTML}, key: index}
+      return React.createElement('code', props)
+    }
+  },
+  // Anything else, passthrough
+  {
+    shouldProcessNode: isValidNode,
+    processNode: processNodeDefinitions.processDefaultNode
   }
-  return elm
-}
+]
+const postBodyParser = new Parser()
 
-const normalizeBody = body => {
-  const $ = cheerio.load(body)('body')
-  return $.contents().map(normalizeElement)
-}
+const postBodyToComponent = body => (
+  postBodyParser.parseWithInstructions(
+    body,
+    isValidNode,
+    processingInstructions
+  )
+)
 
 const Post = ({ error, post = {} }) => (
   error
@@ -36,6 +68,7 @@ const Post = ({ error, post = {} }) => (
       <title>{post.seo_title}</title>
       <meta name='description' content={post.meta_description} />
       <link rel='stylesheet' type='text/css' href='https://d2z2rr99bkshyr.cloudfront.net/buttercms-post-defaults.css' />
+      <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.6/plugins/codesample/css/prism.css' />
       <style>{`
         .align-center {
           text-align: center;
@@ -65,10 +98,9 @@ const Post = ({ error, post = {} }) => (
       </header>
       <section className='mw9 center pa4 pt5-ns ph4 ph7-l'>
         <FadeIn id='body' delay={500} direction='up'>
-          <div
-            className='bg-near-white georgia center'
-            dangerouslySetInnerHTML={{__html: normalizeBody(post.body)}}
-          />
+          <div className='bg-near-white georgia center'>
+            { postBodyToComponent(post.body) }
+          </div>
         </FadeIn>
       </section>
     </article>
