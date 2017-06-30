@@ -23,7 +23,12 @@ const Home = () => (
             I'm a Chicago based software developer, currently learning ÐApp development in Ethereum.
           </p>
         </FadeIn>
-        <FadeIn id='p3' direction='left' delay={baseDelay + 2 * steppedDelay}>
+        <FadeIn id='p2' direction='left' delay={baseDelay + 2 * steppedDelay}>
+          <p className='f5 f4-ns lh-copy'>
+            In the part-time I work on blockchain investment strategy with Capital Markets Trading.
+          </p>
+        </FadeIn>
+        <FadeIn id='p3' direction='left' delay={baseDelay + 3 * steppedDelay}>
           <p className='f5 f4-ns lh-copy'>
             I've done varied&nbsp;
             <Link href='/work'>
@@ -32,7 +37,7 @@ const Home = () => (
             &nbsp;for some pretty interesting clients.
           </p>
         </FadeIn>
-        <FadeIn id='p4' direction='left' delay={baseDelay + 3 * steppedDelay}>
+        <FadeIn id='p4' direction='left' delay={baseDelay + 4 * steppedDelay}>
           <p className='f5 f4-ns lh-copy'>
             Sparingly, I may&nbsp;
             <Link href='/blog'>
@@ -41,7 +46,7 @@ const Home = () => (
             &nbsp;about programming and related topics.
           </p>
         </FadeIn>
-        <FadeIn id='p5' direction='left' delay={baseDelay + 4 * steppedDelay}>
+        <FadeIn id='p5' direction='left' delay={baseDelay + 5 * steppedDelay}>
           <p className='f5 f4-ns lh-copy'>
             If you're interested in working together, or just feel like connecting, let's&nbsp;
             <Link href='/contact'>
@@ -51,7 +56,7 @@ const Home = () => (
           </p>
         </FadeIn>
       </article>
-      <FadeIn id='socials' duration='2s' delay={1300 + 5 * steppedDelay}>
+      <FadeIn id='socials' duration='2s' delay={1300 + 6 * steppedDelay}>
         <Socials />
       </FadeIn>
     </FadeIn>
