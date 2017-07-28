@@ -5,6 +5,16 @@ const steppedDelay = 400
 
 const projects = [
   {
+    title: 'ICO Stats: Track ICO Performance',
+    src: 'https://cdn.buttercms.com/hSkIOGsqQauYaXxu5l3i',
+    url: 'https://icostats.com/',
+    description: `
+      <h3 class='mt0 sans-serif tracked-tight'>Full-Stack Development</h3>
+      <p>A frequently trafficked webapp for purchasing tokens and analyzing ICO statistics. Utilizes <em>React</em>, <em>Redux</em>, <em>GraphQL</em>, <em>Web3</em>, and the <em>ShapeShift API</em>.</p>
+      <p>Shared frequently on <a class='sans-serif link fw9 black hover-gold' href='https://www.reddit.com/r/icocrypto/comments/6ednmu/ico_stats_httpsicostatscom/'>Reddit</a>.</p>
+    `
+  },
+  {
     title: 'Porsche: Only A Sports Car',
     src: 'https://d2wzhk7xhrnk1x.cloudfront.net/H2PCszAgSauLD0RQ7INH_porsche.png',
     url: 'https://onlyasportscar.com',
