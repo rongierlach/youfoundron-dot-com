@@ -8,11 +8,5 @@ export default fromJS({
   blog: {
     posts: [],
     search: undefined
-  },
-  contactForm: {
-    name: '',
-    email: '',
-    message: '',
-    submitted: false
   }
 })

@@ -17,27 +17,3 @@ export const selectNavExpanded = createSelector(
 export const selectBlogStatus = state => (
   state.get('blog')
 )
-
-export const selectContactFormStatus = state => (
-  state.get('contactForm')
-)
-
-export const selectContactName = createSelector(
-  selectContactFormStatus,
-  contactForm => contactForm.get('name')
-)
-
-export const selectContactEmail = createSelector(
-  selectContactFormStatus,
-  contactForm => contactForm.get('email')
-)
-
-export const selectContactMessage = createSelector(
-  selectContactFormStatus,
-  contactForm => contactForm.get('message')
-)
-
-export const selectSubmittedStatus = createSelector(
-  selectContactFormStatus,
-  contactForm => contactForm.get('submitted')
-)
