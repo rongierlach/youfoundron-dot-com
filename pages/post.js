@@ -42,7 +42,9 @@ const processingInstructions = [
     processNode: (node, children, i) => {
       const [ code ] = children
       const language = getLanguageFromNode(node)
-      const highlightedHTML = Prism.highlight(code, Prism.languages[language])
+      const highlightedHTML = Prism.languages[language]
+        ? Prism.highlight(code, Prism.languages[language])
+        : code
       const props = {dangerouslySetInnerHTML: {__html: highlightedHTML}, key: i}
       return React.createElement('code', props)
     }

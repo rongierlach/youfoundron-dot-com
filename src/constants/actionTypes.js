@@ -14,14 +14,6 @@ const appTypes = [
   'TOGGLE_NAV'
 ]
 
-const contactFormTypes = [
-  'CHANGE_NAME',
-  'CHANGE_EMAIL',
-  'CHANGE_MESSAGE',
-  'SUBMIT_FORM'
-]
-
 export default {
-  ...scopeTypes(appTypes),
-  ...scopeTypes(contactFormTypes, 'ContactForm')
+  ...scopeTypes(appTypes)
 }
