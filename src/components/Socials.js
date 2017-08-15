@@ -6,7 +6,7 @@ const Socials = () => (
   <section className='pv4 ph3 tc'>
     <a
       className='near-black grow dib mh3'
-      href='https://www.codepen.io/youfoundron'
+      href='https://codepen.io/youfoundron'
       target='_blank'
       title='CodePen'
     ><CodePenSVG /></a>
