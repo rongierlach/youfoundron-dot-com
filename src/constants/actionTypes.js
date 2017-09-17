@@ -1,7 +1,7 @@
 const scopeTypes = (types = [], scope = 'App') => (
   types.reduce(
     (scopedTypes, type) => {
-      scopedTypes[type] = Symbol(`${scope}/${type}`)
+      scopedTypes[type] = `${scope}/${type}`
       return scopedTypes
     }, {}
   )
