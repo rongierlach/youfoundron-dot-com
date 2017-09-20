@@ -20,7 +20,7 @@ const Home = () => (
         <hr />
         <FadeIn id='p1' direction='left' delay={baseDelay + 1 * steppedDelay}>
           <p className='f5 f4-ns lh-copy'>
-            I'm a Chicago based software developer, currently learning ÐApp development in Ethereum.
+            I'm a Chicago based software developer, currently writing web apps and smart contracts in Ethereum.
           </p>
         </FadeIn>
         <FadeIn id='p2' direction='left' delay={baseDelay + 2 * steppedDelay}>
