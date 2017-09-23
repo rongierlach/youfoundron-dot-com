@@ -10,9 +10,9 @@ const projects = [
     url: 'https://icostats.com/',
     description: `
       <h3 class='mt0 sans-serif tracked-tight'>Full-Stack Development</h3>
-      <p>A frequently trafficked webapp for purchasing tokens and analyzing ICO statistics. Utilizes <em>React</em>, <em>Redux</em>, <em>GraphQL</em>, <em>Web3</em>, and the <em>ShapeShift API</em>.</p>
+      <p>A frequently trafficked webapp for purchasing tokens and analyzing ICO statistics. Utilizes <em>React</em>, <em>Redux</em>, <em>Docker</em>, <em>GraphQL</em>, <em>Web3</em>, and the <em>ShapeShift API</em>.</p>
       <p>
-        Featured in <a class='sans-serif link fw9 black hover-gold' href='https://www.forbes.com/sites/chancebarnett/2017/09/23/inside-the-meteoric-rise-of-icos/'>Forbes</a>.
+        Referenced in <a class='sans-serif link fw9 black hover-gold' href='https://www.forbes.com/sites/chancebarnett/2017/09/23/inside-the-meteoric-rise-of-icos/'>Forbes</a>.
         <br/>
         Shared frequently on <a class='sans-serif link fw9 black hover-gold' href='https://www.reddit.com/r/icocrypto/comments/6ednmu/ico_stats_httpsicostatscom/'>Reddit</a>.
       </p>
